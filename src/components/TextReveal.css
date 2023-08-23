@@ -1,0 +1,63 @@
+/* Define custom CSS variables */
+:root {
+  --backgroundColor: #fef852;
+  --backgroundColorSecondary: #fffc94;
+  --textPrimaryColor: #2a2a2a;
+
+  --headlineBig: clamp(
+    3rem,
+    5vw,
+    10rem
+  ); /* Responsive font size range for larger headlines */
+  --headlineSmall: clamp(
+    1rem,
+    1.2vw,
+    6rem
+  ); /* Responsive font size range for smaller headlines */
+}
+
+/* Apply base font family and background color to the entire body */
+body {
+  font-family: "Montserrat", sans-serif; /* Font family for the entire page */
+  background-color: var(
+    --backgroundColor
+  ); /* Background color using the defined CSS variable */
+}
+
+/* Styling for the reveal container */
+.reveal {
+  background: var(
+    --backgroundColor
+  ); /* Background color using the defined CSS variable */
+  padding-left: 10%; /* Add left padding of 10% */
+  padding-right: 10%; /* Add right padding of 10% */
+}
+
+/* Styling for the reveal text */
+.reveal-text {
+  font-weight: 800; /* Bold font weight */
+  font-size: var(
+    --headlineBig
+  ); /* Use the defined CSS variable for font size */
+  line-height: var(
+    --headlineBig
+  ); /* Use the defined CSS variable for line height */
+  color: var(--backgroundColor); /* Text color using the defined CSS variable */
+}
+
+/* Spacing for smaller viewports */
+.spacing-small {
+  height: 50vh; /* Set height to 50% of the viewport height */
+}
+
+/* Additional spacing for larger viewports */
+.spacing {
+  height: 90vh; /* Set height to 90% of the viewport height */
+}
+
+/* Media query for screens with a maximum width of 500px */
+@media screen and (max-width: 500px) {
+  .reveal {
+    padding-left: 10px; /* Change left padding to 10px for smaller screens */
+  }
+}
